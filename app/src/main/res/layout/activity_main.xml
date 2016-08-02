@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:id="@+id/main_layout"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@drawable/london_crop">
+
+    <TextView android:text="@string/app_msg"
+        android:id="@+id/app_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#FFF"/>
+
+    <TextView android:text="Address*:"
+        android:id="@+id/street_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/app_msg"
+        android:textSize="23sp"
+        android:textColor="#FFF"/>
+    <EditText
+        android:id="@+id/street"
+        android:layout_height="30dp"
+        android:layout_width="fill_parent"
+        android:paddingLeft="8dp"
+        android:layout_below="@id/street_msg"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="0dp"
+        android:hint="Street Address"
+        android:inputType="textPostalAddress"
+        android:background="@drawable/input_bg"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This field is required"
+        android:id="@+id/street_err"
+        android:layout_below="@+id/street"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#ff100c"
+        android:visibility="gone"
+        />
+
+    <TextView android:text="City*:"
+        android:id="@+id/city_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/street"
+        android:textSize="23sp"
+        android:textColor="#FFF"/>
+    <EditText
+        android:id="@+id/city"
+        android:layout_height="30dp"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/city_msg"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="0dp"
+        android:paddingLeft="8dp"
+        android:hint="City"
+        android:inputType="text"
+        android:background="@drawable/input_bg"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This field is required"
+        android:id="@+id/city_err"
+        android:layout_below="@+id/city"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#ff100c"
+        android:visibility="gone"
+        />
+
+    <TextView android:text="State*:"
+        android:id="@+id/state_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/city"
+        android:textSize="23sp"
+        android:textColor="#FFF"/>
+
+    <Spinner
+        android:id="@+id/state"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="0dp"
+        android:layout_below="@id/state_msg"
+        android:paddingLeft="5dp"
+        android:background="@drawable/input_bg"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This field is required"
+        android:id="@+id/state_err"
+        android:layout_below="@+id/state"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#ff100c"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="52dp"
+        android:text="Search"
+        android:background="@drawable/light_grey"
+        android:id="@+id/button"
+        android:layout_below="@+id/state"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/street_msg"
+        android:layout_alignEnd="@+id/street_msg" />
+
+    <ImageView
+        android:id="@+id/zillowpic"
+        android:src="@drawable/zillowlogo_rounded"
+        android:layout_alignRight="@+id/state"
+        android:layout_alignEnd="@+id/state"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignTop="@+id/button"
+        android:layout_width="90dp"
+        android:layout_height="50dp"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="38dp"
+        android:background="#FFF"
+        android:layout_below="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:id="@+id/err"
+        android:layout_below="@+id/line"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/line"
+        android:layout_alignEnd="@+id/line" />
+
+
+</RelativeLayout>
+
