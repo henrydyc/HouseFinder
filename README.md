@@ -7,7 +7,7 @@ After downloading the repo, you can build and run this project in an Android IDE
 
 
 ## Screenshots and Navigation
-![Screen shots](/screenshots/All_Screens.jpg)
+![Screen shots](/images/All_Screens.jpg)
 Here are the screen shots showing the three main screens of the App:
 * **Main Screen** allows user to type in an address in the United States to query for
 * **Basic Info Screen** shows the basic information of the real estate in a tabular format
