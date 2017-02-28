@@ -40,3 +40,13 @@ captures/
 
 # Keystore files
 *.jks
+
+# JS libraries
+web-app/node_modules/
+
+#Sublime text files
+*sublime-project
+*sublime-workspace
+
+#build files
+web-app/dist/
